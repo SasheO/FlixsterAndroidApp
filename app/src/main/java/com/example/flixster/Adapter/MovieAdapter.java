@@ -62,7 +62,18 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
             tvTitle = itemView.findViewById(R.id.tvTitle);
             tvOverview = itemView.findViewById(R.id.tvOverview);
             ivPoster = itemView.findViewById(R.id.ivPoster);
+            itemView.setOnClickListener(this);
+        }
 
+        @Override
+        public void onClick(View v) {
+            int position = getAdapterPosition();
+            if (position != RecyclerView.NO_POSITION) {
+                Movie movie = movies.get(position);
+                Intent intent = new Intent(context, MovieDetailsActivity.class);
+                intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
+                context.startActivity(intent);
+            }
         }
 
         public void bind(Movie movie) {
@@ -82,21 +93,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.ViewHolder> 
 
         }
 
-        @Override
-        public void onClick(View v) {
-            // gets item position
-            int position = getAdapterPosition();
-            // make sure the position is valid, i.e. actually exists in the view
-            if (position != RecyclerView.NO_POSITION) {
-                // get the movie at the position, this won't work if the class is static
-                Movie movie = movies.get(position);
-                // create intent for the new activity
-                Intent intent = new Intent(context, MovieDetailsActivity.class);
-                // serialize the movie using parceler, use its short name as a key
-                intent.putExtra(Movie.class.getSimpleName(), Parcels.wrap(movie));
-                // show the activity
-                context.startActivity(intent);
-            }
-        }
+
     }
 }
