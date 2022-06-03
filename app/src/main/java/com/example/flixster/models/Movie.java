@@ -21,7 +21,9 @@ public class Movie {
     public Movie() {}
 
 
-
+    public String getOriginalLanguage() {
+        return originalLanguage;
+    }
 
     public Movie(JSONObject jsonObject) throws JSONException {
         posterPath = "https://image.tmdb.org/t/p/w342" + jsonObject.getString("poster_path");
@@ -29,7 +31,7 @@ public class Movie {
         overview = jsonObject.getString("overview");
         backdropPath = "https://image.tmdb.org/t/p/w342" + jsonObject.getString("backdrop_path");
         voteAverage = jsonObject.getDouble("vote_average");
-        originalLanguage = jsonObject.getString("original_language");
+        originalLanguage = "Lang: "  + jsonObject.getString("original_language");
     }
 
     public static List<Movie> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
@@ -43,9 +45,6 @@ public class Movie {
 
     public String getPosterPath() {
         return posterPath;
-    }
-    public String getOriginalLanguage() {
-        return originalLanguage;
     }
 
     public String getBackdropPath(){
