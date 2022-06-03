@@ -43,6 +43,7 @@ public class MovieDetailsActivity extends AppCompatActivity {
         tvOverview.setText(movie.getOverview());
         tvOriginalLanguage.setText(movie.getOriginalLanguage());
 
+
         // vote average is 0..10, convert to 0..5 by dividing by 2
         float voteAverage = movie.getVoteAverage().floatValue();
         rbVoteAverage.setRating(voteAverage / 2.0f);
