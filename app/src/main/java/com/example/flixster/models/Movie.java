@@ -15,9 +15,12 @@ public class Movie {
     String title;
     String overview;
     Double voteAverage;
+    String originalLanguage;
 
     // no arg empty constructor required for parceler
     public Movie() {}
+
+
 
 
     public Movie(JSONObject jsonObject) throws JSONException {
@@ -26,6 +29,7 @@ public class Movie {
         overview = jsonObject.getString("overview");
         backdropPath = "https://image.tmdb.org/t/p/w342" + jsonObject.getString("backdrop_path");
         voteAverage = jsonObject.getDouble("vote_average");
+        originalLanguage = jsonObject.getString("original_language");
     }
 
     public static List<Movie> fromJsonArray(JSONArray movieJsonArray) throws JSONException {
@@ -39,6 +43,9 @@ public class Movie {
 
     public String getPosterPath() {
         return posterPath;
+    }
+    public String getOriginalLanguage() {
+        return originalLanguage;
     }
 
     public String getBackdropPath(){
