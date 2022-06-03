@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:background="#000000"
     android:paddingTop="2dp">
 
     <ImageView
         android:id="@+id/ivPoster"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="150dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginStart="0dp"
@@ -28,6 +29,7 @@
         android:layout_toEndOf="@+id/ivPoster"
         android:layout_alignParentTop="true"
         android:textSize="24sp"
+        android:textColor="#808080"
         tools:text="Fantastic Beasts: The Secrets of Dumbledore" />
 
     <TextView
@@ -38,6 +40,7 @@
         android:layout_marginStart="2dp"
         android:layout_marginTop="4dp"
         android:layout_toEndOf="@+id/ivPoster"
+        android:textColor="#808080"
         tools:text="Dummy text lorem ipsum" />
 
 </RelativeLayout>
