@@ -1,6 +1,7 @@
 # FlixsterAndroidApp
 
-Core Features
+Building an android app with the following core features:
+
  - View a list of current movies from The Movie Database API
  - View specific details about each movie, including Title, Synopsis, and Poster Image
  - Implement a RecyclerView to display all task items
