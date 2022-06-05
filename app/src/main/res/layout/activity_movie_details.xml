@@ -19,7 +19,8 @@
         android:layout_alignParentRight="true"
         android:text="Movie Title"
         android:textAppearance="@android:style/TextAppearance.Large"
-        android:textColor="#808080" />
+        android:textColor="#808080"
+        android:textStyle="italic" />
 
     <TextView
         android:id="@+id/tvOverview"
