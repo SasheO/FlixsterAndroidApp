@@ -32,8 +32,6 @@ Here's a walkthrough of implemented user stories:
 
 <img src='Screen_Recording_2022-06-05_at_12_25_00_PM_AdobeCreativeCloudExpress.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [Kap](https://getkap.co/).
-
 ## Notes
 
 Implementing a recycler view and orientation responsiveness was difficult.
